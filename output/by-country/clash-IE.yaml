@@ -17,47 +17,17 @@ proxies:
     short-id: 0eec442e7b34d2f2
   servername: www.tesla.com
   client-fingerprint: chrome
-- name: 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  server: uk2.miyazono-kaori.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: e125bbfe-1307-471d-b21c-c1afe0c1de98
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: QdYs12kmf0mAXNOEPgMpLN5dbZUlgvRK2zCqynOmqBk
-    short-id: '20'
-  servername: www.bp.com
-  client-fingerprint: chrome
-- name: 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
-  server: uk1.miyazono-kaori.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: e125bbfe-1307-471d-b21c-c1afe0c1de98
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _dsOu_vxEU7pY3sIeGJxIpR0Ac2KoqIyBor2Bx0CwGA
-    short-id: d923
-  servername: www.bp.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
 rules:
 - MATCH,PROXIES
