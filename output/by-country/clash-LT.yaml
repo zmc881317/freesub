@@ -18,6 +18,19 @@ proxies:
   servername: online.1c.ru
   client-fingerprint: safari
 - name: 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
+  server: lithuania-2.kochvpn.pw
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2923fef2-3b52-a9c2-cde4-c2343eb74a2c
+  tls: true
+  servername: lithuania-2.kochvpn.pw
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /stream/ws
+- name: 🇱🇹 立陶宛 (Lithuania) 03 - xiaohe
   server: 94.176.234.161
   port: 443
   udp: true
@@ -29,7 +42,7 @@ proxies:
     public-key: UpI0XKNUsMJ24XawPQ8g7br1faEsO7BOvmIIGg9Wrm8
     short-id: dbb2ef1c7c
   servername: www.intel.com
-  client-fingerprint: chrome
+  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +50,7 @@ proxy-groups:
   - AUTO
   - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
   - 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
+  - 🇱🇹 立陶宛 (Lithuania) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +58,6 @@ proxy-groups:
   proxies:
   - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
   - 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
+  - 🇱🇹 立陶宛 (Lithuania) 03 - xiaohe
 rules:
 - MATCH,PROXIES
