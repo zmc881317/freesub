@@ -6,22 +6,25 @@
     {
       "type": "vless",
       "tag": "🇸🇪 瑞典 (Sweden) 01 - xiaohe",
-      "server": "177.3.209.65",
-      "server_port": 443,
-      "uuid": "bcd1dab9-24f2-4002-b3ee-cd6f7072deba",
-      "flow": "xtls-rprx-vision",
+      "server": "176.108.249.189",
+      "server_port": 9881,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
-        "server_name": "got.bridge.iplnte.shop",
+        "server_name": "dl.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
-          "public_key": "1he5EyHxI595x0mNkFNxOebUOQZGVGIy_c92bn1qO2o",
-          "short_id": "ac31827454d7f693"
+          "public_key": "ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU",
+          "short_id": "aabb"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     },
     {
