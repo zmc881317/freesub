@@ -17,30 +17,17 @@ proxies:
     short-id: 68d2eb23
   servername: 83.217.9.140
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  server: www.asamping.ir
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 5f424b45-29e5-4cbe-b752-88ac535c11b7
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: www.asamping.ir
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
 rules:
 - MATCH,PROXIES
