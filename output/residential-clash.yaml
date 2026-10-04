@@ -4,28 +4,41 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
-  server: 172.64.32.108
-  port: 8880
+- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  server: 172.66.152.4
+  port: 443
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
+  tls: true
+  servername: argo6.5671234.xyz
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /e8e2cecb6188f7fb
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: argo6.5671234.xyz
+- name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
+  server: a91af2af-tmm5c0-twnp5a-ahsb.hk3.hyhuawei.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 2e42c1ee-aaaa-11ec-bb74-f23c9164ca5d
+  sni: a91af2af-tmm5c0-twnp5a-ahsb.hk3.hyhuawei.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

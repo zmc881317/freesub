@@ -4,21 +4,27 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe",
-      "server": "172.67.159.161",
+      "type": "trojan",
+      "tag": "🇦🇺 澳大利亚 (Australia) 01 - xiaohe",
+      "server": "199.232.78.160",
       "server_port": 443,
-      "uuid": "76ac91c5-ea82-4046-8ee7-2ffbb563ac94",
+      "password": "mitivpn",
       "tls": {
         "enabled": true,
-        "server_name": "geo.shkola112.site",
-        "insecure": false
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/api-vless",
         "headers": {
-          "Host": "geo.shkola112.site"
+          "Host": "mitivpn---deb--s---mitivpn-2.global.ssl.fastly.net"
         }
       }
     },
@@ -27,14 +33,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe"
+        "🇦🇺 澳大利亚 (Australia) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe"
+        "🇦🇺 澳大利亚 (Australia) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
