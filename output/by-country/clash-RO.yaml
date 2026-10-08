@@ -13,21 +13,30 @@ proxies:
   sni: grape-test-italy.dynuddns.net
   skip-cert-verify: true
 - name: 🇷🇴 罗马尼亚 (Romania) 02 - xiaohe
-  server: bogging-eyeteeth-fly.freesocks.work
+  server: 162.249.126.40
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  sni: hop-germany-september.dynuddns.com
+  skip-cert-verify: false
+- name: 🇷🇴 罗马尼亚 (Romania) 03 - xiaohe
+  server: 185.156.44.99
   port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-- name: 🇷🇴 罗马尼亚 (Romania) 03 - xiaohe
-  server: 103.126.51.50
+  type: hysteria2
+  password: gf1:gfhysteria2024
+  sni: www.amazon.com
+  skip-cert-verify: true
+- name: 🇷🇴 罗马尼亚 (Romania) 04 - xiaohe
+  server: 103.126.51.46
   port: 8443
   udp: true
   type: hysteria2
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   sni: ocober-romania-new.yyuyy.com
   skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 04 - xiaohe
+- name: 🇷🇴 罗马尼亚 (Romania) 05 - xiaohe
   server: 38.180.253.20
   port: 443
   udp: true
@@ -38,7 +47,7 @@ proxies:
   servername: video.surfweb.club
   skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇷🇴 罗马尼亚 (Romania) 05 - xiaohe
+- name: 🇷🇴 罗马尼亚 (Romania) 06 - xiaohe
   server: 162.249.125.133
   port: 443
   udp: true
@@ -48,14 +57,21 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚 (Romania) 06 - xiaohe
-  server: 162.249.126.39
-  port: 8443
+- name: 🇷🇴 罗马尼亚 (Romania) 07 - xiaohe
+  server: 38.180.35.145
+  port: 443
   udp: true
-  type: hysteria2
-  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
-  sni: hop-germany-september.dynuddns.com
-  skip-cert-verify: true
+  type: trojan
+  password: 600421cf-11d7-429f-a65b-c30397f1bc03
+  sni: bu2.freeguard.org
+  skip-cert-verify: false
+- name: 🇷🇴 罗马尼亚 (Romania) 08 - xiaohe
+  server: 154.46.31.106
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,6 +83,8 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 04 - xiaohe
   - 🇷🇴 罗马尼亚 (Romania) 05 - xiaohe
   - 🇷🇴 罗马尼亚 (Romania) 06 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 07 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -78,5 +96,7 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 04 - xiaohe
   - 🇷🇴 罗马尼亚 (Romania) 05 - xiaohe
   - 🇷🇴 罗马尼亚 (Romania) 06 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 07 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 08 - xiaohe
 rules:
 - MATCH,PROXIES
